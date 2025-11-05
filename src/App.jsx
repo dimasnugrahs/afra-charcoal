@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import ScrollToTop from "./components/layout/ScrollToTop";
 import ContactPage from "./pages/ContactPage";
 import ProductPage from "./pages/ProductPage";
+import ScrollToTop from "./components/layout/ScrollToTop";
 
 function App() {
   return (
