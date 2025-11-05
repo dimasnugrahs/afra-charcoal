@@ -6,12 +6,12 @@ import StatSection from "../components/home/StatSection";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="w-full">
       <HeroSection />
       <StatSection />
       <ProfileSection />
       <ProductsSection />
       <PhiloshopySection />
-    </>
+    </div>
   );
 }
