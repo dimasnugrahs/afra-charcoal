@@ -3,7 +3,7 @@ import profileImage from "../../assets/images/profile-image.png";
 // eslint-disable-next-line
 import { motion } from "framer-motion";
 
-export default function CompanyProfileSection() {
+export default function ContactSection() {
   return (
     <div
       className="px-6 lg:px-20 py-6 lg:py-20"
@@ -19,7 +19,7 @@ export default function CompanyProfileSection() {
         transition={{ duration: 1 }}
         className="mb-4 text-xl font-bold"
       >
-        Company Profile
+        Contact Us
       </motion.section>
       <motion.section
         initial={{ opacity: 0, x: -50 }}
@@ -29,29 +29,15 @@ export default function CompanyProfileSection() {
         className="grid grid-cols-1 lg:grid-cols-2 gap-6"
       >
         <img src={profileImage} className="w-120" />
-        <div className="grid grid-cols-1 lg:grid-cols-2 py-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 py-5 bg-company-200/20 px-8">
           <div className="title-company w-4/5 font-bold">Name of Company</div>
           <div className="mb-2 lg:mb-0 subtitle">CV AFRA</div>
-          <div className="title-company w-4/5 font-bold">Legality</div>
-          <div className="mb-2 lg:mb-0 subtitle">PERSONAL / PERDAGANGAN</div>
-          <div className="title-company w-4/5 font-bold">Date of birth</div>
-          <div className="mb-2 lg:mb-0 subtitle">08 June 2007</div>
-          <div className="title-company w-4/5 font-bold">
-            Date of First Export
-          </div>
-          <div className="mb-2 lg:mb-0 subtitle">&nbsp;</div>
           <div className="title-company w-4/5 font-bold">Director</div>
           <div className="mb-2 lg:mb-0 subtitle">AGUS SUGIANTO</div>
           <div className="title-company w-4/5 font-bold">
             Operational & Production manager
           </div>
           <div className="mb-2 lg:mb-0 subtitle">PUJUT PURNAMA</div>
-          <div className="title-company w-4/5 font-bold">Kind of Product</div>
-          <div className="mb-2 lg:mb-0 subtitle">HARDWOOD CHARCOAL</div>
-          <div className="title-company w-4/5 font-bold">
-            Monthly Production Capacity
-          </div>
-          <div className="mb-2 lg:mb-0 subtitle">110 Ton</div>
           <div className="title-company w-4/5 font-bold">Office address</div>
           <div className="mb-2 lg:mb-0 subtitle">
             BTN SURYA GRAHA LESTARI BLOK N2 TABANAN - BALI
@@ -63,7 +49,7 @@ export default function CompanyProfileSection() {
           <div className="title-company w-4/5 font-bold">
             Warehouse and Storage location
           </div>
-          <div className="mb-2 lg:mb-0 subtitle">
+          <div className="subtitle">
             KOMPLEK GUDANG ARANG, JL. 28 OKTOBER SIANTAN HULU, PONTIANAK -
             KALBAR
           </div>

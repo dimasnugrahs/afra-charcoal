@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
+// eslint-disable-next-line
+import { motion } from "framer-motion";
+
 export default function Footer() {
   const instagramUrl = "https://www.instagram.com/";
   const facebookUrl = "https://www.facebook.com/";
@@ -8,7 +11,13 @@ export default function Footer() {
 
   return (
     <section className="grid grid-cols-1 pt-20 bg-company-400/20">
-      <div className="text-center">
+      <motion.div
+        className="text-center"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1.5 }}
+      >
         <div className="flex justify-center items-center">
           <Logo size="lg:w-15 w-10" />
           <h1 className="text-4xl font-bold ml-2">Afra Charcoal</h1>
@@ -24,7 +33,7 @@ export default function Footer() {
             Products
           </Link>
           <Link to="/contact" className="mx-4">
-            Contact Us
+            Contact
           </Link>
         </ul>
         <div className="flex justify-center mt-4">
@@ -84,7 +93,7 @@ export default function Footer() {
         <div className="mt-10 mb-2 border-t py-5">
           &copy; 2025 Afra. All rights reserved.
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

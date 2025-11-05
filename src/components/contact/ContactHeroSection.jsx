@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import heroImage from "../../assets/images/background-image.jpg";
 
-export default function HeroAboutSection() {
+export default function ContactHeroSection() {
   const backgroundStyle = {
     backgroundImage: `url(${heroImage})`,
     backgroundSize: "cover", // Agar gambar menutupi area
@@ -20,7 +20,7 @@ export default function HeroAboutSection() {
               transition={{ duration: 1.5, delay: 0.5 }}
               className="text-4xl lg:text-6xl px-8 font-extrabold text-company-100 py-10 lg:py-0"
             >
-              About Afra Company
+              Contact Afra Company
             </motion.h1>
           </div>
         </section>
