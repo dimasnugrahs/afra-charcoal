@@ -23,23 +23,23 @@ export default function Footer() {
           <h1 className="text-4xl font-bold ml-2">Afra Charcoal</h1>
         </div>
         <ul className="flex justify-center mt-10">
-          <Link to="/" className="mx-4">
+          <Link to="/" className="mx-4 hover:text-company-400">
             Home
           </Link>
-          <Link to="/about" className="mx-4">
+          <Link to="/about" className="mx-4 hover:text-company-400">
             About
           </Link>
-          <Link to="/product/charcoal" className="mx-4">
+          <Link to="/product/charcoal" className="mx-4 hover:text-company-400">
             Products
           </Link>
-          <Link to="/contact" className="mx-4">
+          <Link to="/contact" className="mx-4 hover:text-company-400">
             Contact
           </Link>
         </ul>
         <div className="flex justify-center mt-4">
           <a href={instagramUrl} target="_blank" className="mx-4">
             <svg
-              className="w-8 h-8 lg:w-12 lg:h-12 text-company-600 hover:text-company-400"
+              className="w-8 h-8 lg:w-8 lg:h-8 text-company-600 hover:text-company-400"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -57,7 +57,7 @@ export default function Footer() {
           </a>
           <a href={facebookUrl} target="_blank" className="mx-4">
             <svg
-              className="w-8 h-8 lg:w-12 lg:h-12 text-company-600 hover:text-company-400"
+              className="w-8 h-8 lg:w-8 lg:h-8 text-company-600 hover:text-company-400"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -74,7 +74,7 @@ export default function Footer() {
           </a>
           <a href={twitterUrl} target="_blank" className="mx-4">
             <svg
-              className="w-8 h-8 lg:w-12 lg:h-12 text-company-600 hover:text-company-400"
+              className="w-8 h-8 lg:w-8 lg:h-8 text-company-600 hover:text-company-400"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -90,7 +90,7 @@ export default function Footer() {
             </svg>
           </a>
         </div>
-        <div className="mt-10 mb-2 border-t py-5">
+        <div className="mt-6 mb-2 border-t border-company-400 py-5">
           &copy; 2025 Afra. All rights reserved.
         </div>
       </motion.div>
