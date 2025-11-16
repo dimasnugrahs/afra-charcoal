@@ -24,8 +24,8 @@ export default function StatSection() {
           </div>
           <div className="py-10 lg:py-0 px-8 border-b-2 lg:border-b-0 lg:border-r-2 border-company-700">
             <div className=" text-xl font-medium mb-2">
-              9999+
-              <div>Customer Guarantee</div>
+              Customer Guarantee
+              <div>&nbsp;</div>
             </div>
             <div className="font-light pb-6 lg:pb-0">
               We offer a flawless delivery guarantee and responsive customer
