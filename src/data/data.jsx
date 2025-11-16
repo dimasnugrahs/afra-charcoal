@@ -17,14 +17,14 @@ export const products = [
     id: 4,
     image: productImage,
   },
-  {
-    id: 5,
-    image: productImage,
-  },
-  {
-    id: 6,
-    image: productImage,
-  },
+  // {
+  //   id: 5,
+  //   image: productImage,
+  // },
+  // {
+  //   id: 6,
+  //   image: productImage,
+  // },
 ];
 
 export const philosophy = [

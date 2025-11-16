@@ -38,7 +38,7 @@ export default function HeroSection() {
                 className="mt-4"
               >
                 <Link
-                  to="/"
+                  to="/product/charcoal"
                   className="text-lg  text-white rounded bg-company-500 hover:bg-transparent hover:text-company-950 hover:border-company-950 hover:border p-4 py-2"
                 >
                   Let's explore more

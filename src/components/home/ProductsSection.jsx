@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { products } from "../../data/data";
 
 // eslint-disable-next-line
@@ -15,17 +16,19 @@ export default function ProductsSection() {
       >
         Our Product
       </motion.div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+      <div className="grid grid-cols-2  gap-4 mt-4">
         {products.map((product) => (
-          <motion.img
-            key={product.id}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 1.5 }}
-            src={product.image}
-            className="w-full rounded-md h-36 object-cover shadow hover:shadow-xl hover:-translate-y-2.5 duration-300"
-          />
+          <Link to="/product/charcoal">
+            <motion.img
+              key={product.id}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 1.5 }}
+              src={product.image}
+              className="w-full rounded-md h-44 lg:h-80 object-cover shadow hover:shadow-xl hover:-translate-y-2.5 duration-300"
+            />
+          </Link>
         ))}
       </div>
     </section>
