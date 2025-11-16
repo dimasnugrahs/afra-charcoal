@@ -1,4 +1,4 @@
-import profileImage from "../../assets/images/profile-image.png";
+import profileImage from "../../assets/images/warehouse-image.jpg";
 
 // eslint-disable-next-line
 import { motion } from "framer-motion";
@@ -22,7 +22,7 @@ export default function CompanyWarehouseSection() {
         transition={{ duration: 1, delay: 0.4 }}
         className="grid grid-cols-1"
       >
-        <img src={profileImage} className="w-120" />
+        <img src={profileImage} className="w-120 rounded-xl" />
       </motion.section>
     </div>
   );

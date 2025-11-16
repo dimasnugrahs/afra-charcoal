@@ -1,4 +1,7 @@
-import productImage from "../assets/images/product-image.png";
+import productImage from "../assets/images/product-image.jpg";
+import productImageSec from "../assets/images/product-image-2.jpg";
+import productImageThird from "../assets/images/product-image-3.jpg";
+import productImageFourth from "../assets/images/product-image-4.jpg";
 
 export const products = [
   {
@@ -7,15 +10,15 @@ export const products = [
   },
   {
     id: 2,
-    image: productImage,
+    image: productImageSec,
   },
   {
     id: 3,
-    image: productImage,
+    image: productImageThird,
   },
   {
     id: 4,
-    image: productImage,
+    image: productImageFourth,
   },
   // {
   //   id: 5,

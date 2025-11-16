@@ -1,5 +1,5 @@
 import Breadcrumbs from "../layout/Breadcrumbs";
-import profileImage from "../../assets/images/hero-image.png";
+import profileImage from "../../assets/images/product-image.jpg";
 
 // eslint-disable-next-line
 import { motion } from "framer-motion";
