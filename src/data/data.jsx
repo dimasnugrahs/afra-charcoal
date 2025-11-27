@@ -1,7 +1,9 @@
-import productImage from "../assets/images/product-image.jpg";
+import productImage from "../assets/images/product-image-1.jpg";
 import productImageSec from "../assets/images/product-image-2.jpg";
 import productImageThird from "../assets/images/product-image-3.jpg";
 import productImageFourth from "../assets/images/product-image-4.jpg";
+import productImageFifth from "../assets/images/product-image-5.jpg";
+import productImageSixth from "../assets/images/product-image-6.jpg";
 
 export const products = [
   {
@@ -19,6 +21,14 @@ export const products = [
   {
     id: 4,
     image: productImageFourth,
+  },
+  {
+    id: 4,
+    image: productImageFifth,
+  },
+  {
+    id: 4,
+    image: productImageSixth,
   },
   // {
   //   id: 5,
