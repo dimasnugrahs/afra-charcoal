@@ -19,7 +19,7 @@ export default function Footer() {
         transition={{ duration: 1.5 }}
       >
         <div className="flex justify-center items-center">
-          <Logo size="lg:w-15 w-10" />
+          <Logo size="lg:w-15 w-10" alt="Afra Charcoal official brand logo" />
           <h1 className="text-4xl font-bold ml-2">Afra Charcoal</h1>
         </div>
         <ul className="flex justify-center mt-10">

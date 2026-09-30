@@ -18,14 +18,14 @@ export default function ProductsSection() {
       </motion.div>
       <div className="grid grid-cols-2  gap-4 mt-4">
         {products.map((product) => (
-          <Link to="/product/charcoal">
+          <Link to="/product/charcoal" key={product.id}>
             <motion.img
-              key={product.id}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 1.5 }}
               src={product.image}
+              alt={product.alt}
               className="w-full rounded-md h-44 lg:h-80 object-cover shadow hover:shadow-xl hover:-translate-y-2.5 duration-300"
             />
           </Link>

@@ -9,26 +9,32 @@ export const products = [
   {
     id: 1,
     image: productImage,
+    alt: "Afra premium BBQ charcoal packaging box side view"
   },
   {
     id: 2,
     image: productImageSec,
+    alt: "Afra wood charcoal export box top view"
   },
   {
     id: 3,
     image: productImageThird,
+    alt: "High grade Indonesian charcoal briquettes box"
   },
   {
     id: 4,
     image: productImageFourth,
+    alt: "Natural BBQ charcoal packaging box for wholesale export"
   },
   {
-    id: 4,
+    id: 5,
     image: productImageFifth,
+    alt: "Eco friendly hardwood charcoal export packaging"
   },
   {
-    id: 4,
+    id: 6,
     image: productImageSixth,
+    alt: "Custom branded BBQ charcoal carton box for international buyers"
   },
   // {
   //   id: 5,

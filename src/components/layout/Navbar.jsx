@@ -63,7 +63,7 @@ export default function Navbar() {
               className="shrink-0"
               onClick={() => handleScrollToTop("/")}
             >
-              <Logo size="lg:w-15 w-10" />
+              <Logo size="lg:w-15 w-10" alt="Afra Charcoal company logo" />
             </Link>
           </motion.ul>
           <div className="hidden lg:flex grow justify-end space-x-4">

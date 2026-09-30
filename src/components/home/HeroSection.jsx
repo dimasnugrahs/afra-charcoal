@@ -55,7 +55,11 @@ export default function HeroSection() {
                 transition={{ duration: 1.5 }}
                 className="text-company-800 relative"
               >
-                <img src={HeroSectionImage} className="lg:w-130" />
+                <img
+                  src={HeroSectionImage}
+                  alt="High quality wood charcoal briquettes for BBQ"
+                  className="lg:w-130"
+                />
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}

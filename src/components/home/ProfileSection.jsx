@@ -37,7 +37,11 @@ export default function ProfileSection() {
           transition={{ duration: 1.5, delay: 0.5 }}
           className="flex justify-center mt-8 lg:mt-0"
         >
-          <img className="w-120" src={profileImage} />
+          <img
+            className="w-120"
+            src={profileImage}
+            alt="Natural wood charcoal production and warehouse facility in Indonesia"
+          />
         </motion.div>
       </section>
     </>
