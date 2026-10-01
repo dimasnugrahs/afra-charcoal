@@ -52,7 +52,7 @@ export default function Navbar() {
     >
       <div className="mx-auto">
         <div className="flex items-center justify-between py-2 px-6 lg:px-0 lg:py-0 lg:mt-0 mt-4">
-          <motion.ul
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -60,82 +60,85 @@ export default function Navbar() {
           >
             <Link
               to="/"
-              className="shrink-0"
+              className="shrink-0 block"
               onClick={() => handleScrollToTop("/")}
             >
               <Logo size="lg:w-15 w-10" alt="Afra Charcoal company logo" />
             </Link>
-          </motion.ul>
+          </motion.div>
           <div className="hidden lg:flex grow justify-end space-x-4">
-            {menus.map((menu, index) => (
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 1 }}
-                key={index}
-                className="relative group py-4"
-              >
-                <ul>
-                  {menu.subMenu ? (
-                    <Link
-                      to="#"
-                      onClick={(e) => e.preventDefault()}
-                      className="px-4 text-company-950 hover:text-company-600"
-                    >
-                      {menu.name}
-                    </Link>
-                  ) : (
-                    <Link
-                      to={menu.to}
-                      onClick={() => handleScrollToTop(menu.to)}
-                      className="px-4 text-company-950 hover:text-company-600"
-                    >
-                      {menu.name}
-                    </Link>
-                  )}
+            <ul className="flex items-center space-x-4">
+              {menus.map((menu, index) => (
+                <li key={index}>
+                  <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 1 }}
+                    className="relative group py-4"
+                  >
+                    {menu.subMenu ? (
+                      <Link
+                        to="#"
+                        onClick={(e) => e.preventDefault()}
+                        className="px-4 text-company-950 hover:text-company-600"
+                      >
+                        {menu.name}
+                      </Link>
+                    ) : (
+                      <Link
+                        to={menu.to}
+                        onClick={() => handleScrollToTop(menu.to)}
+                        className="px-4 text-company-950 hover:text-company-600"
+                      >
+                        {menu.name}
+                      </Link>
+                    )}
 
-                  {/* Sub Menu */}
-                  {menu.subMenu && (
-                    <div className="absolute left-0 mt-4 w-64 bg-company-900 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
-                      <div className="absolute top-0 left-4 -mt-2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-company-900"></div>
-                      {menu.subMenu.map((sub, subIndex) => (
-                        <Link
-                          to={sub.to}
-                          key={subIndex}
-                          className="block px-6 py-4 text-white hover:text-company-200 border-solid border-b border-company-50"
-                          onClick={() => handleScrollToTop(sub.to)}
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </ul>
-              </motion.div>
-            ))}
+                    {/* Sub Menu Desktop */}
+                    {menu.subMenu && (
+                      <div className="absolute left-0 mt-4 w-64 bg-company-900 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                        <div className="absolute top-0 left-4 -mt-2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-company-900"></div>
+                        <ul className="py-1">
+                          {menu.subMenu.map((sub, subIndex) => (
+                            <li key={subIndex}>
+                              <Link
+                                to={sub.to}
+                                className="block px-6 py-4 text-white hover:text-company-200 border-solid border-b border-company-50"
+                                onClick={() => handleScrollToTop(sub.to)}
+                              >
+                                {sub.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </motion.div>
+                </li>
+              ))}
+            </ul>
           </div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1 }}
-            className="hidden lg:flex"
+            className="hidden lg:flex items-center"
           >
-            <ul>
-              <Link
-                to="/contact"
-                className="px-8 py-2 ml-4 rounded-lg bg-company-600 text-white hover:text-company-950  hover:bg-transparent hover:ring hover:ring-company-900 hover:shadow-lg"
-              >
-                Contact Us
-              </Link>
-            </ul>
+            <Link
+              to="/contact"
+              className="px-8 py-2 ml-4 rounded-lg bg-company-600 text-white hover:text-company-950 hover:bg-transparent hover:ring hover:ring-company-900 hover:shadow-lg transition-all"
+            >
+              Contact Us
+            </Link>
           </motion.div>
 
           {/* Trigger button navbar mobile */}
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
+              aria-label="Toggle navigation menu"
               className="text-company-950 text-sm focus:outline-none z"
             >
               <svg
@@ -159,51 +162,58 @@ export default function Navbar() {
       {/* Menu versi mobile */}
       {isOpen && (
         <div className="lg:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 ">
-            <ul>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {/* 🟢 PENANDA: Memastikan semua anak dari <ul> adalah elemen <li> */}
+            <ul className="space-y-1">
               {menus.map((menu, index) => (
-                <div key={index} className="relative ">
+                <li key={index} className="relative">
                   {menu.subMenu === null ? (
                     <Link
                       to={menu.to}
                       className="text-company-950 hover:text-company-50 hover:bg-company-600 hover:rounded block px-5 py-2"
                       onClick={() => {
                         handleScrollToTop(menu.to);
-                        setIsOpen(false); // Menutup navbar setelah klik sub-menu
+                        setIsOpen(false);
                       }}
                     >
                       {menu.name}
                     </Link>
                   ) : (
                     <div className="group">
-                      <button className="text-company-950 hover:text-company-600 block px-5 py-2">
+                      <button className="text-company-950 hover:text-company-600 block px-5 py-2 w-full text-left">
                         {menu.name}
                       </button>
-                      <div className="ml-4">
+                      {/* 🟢 PENANDA: Submenu mobile juga menggunakan <ul> dan <li> */}
+                      <ul className="ml-4 space-y-1">
                         {menu.subMenu.map((sub, subIndex) => (
-                          <Link
-                            to={sub.to}
-                            key={subIndex}
-                            className="block px-4 py-2 text-company-950 hover:text-company-50 hover:bg-company-600 hover:rounded"
-                            onClick={() => {
-                              handleScrollToTop(sub.to);
-                              setIsOpen(false); // Menutup navbar setelah klik menu
-                            }}
-                          >
-                            {sub.name}
-                          </Link>
+                          <li key={subIndex}>
+                            <Link
+                              to={sub.to}
+                              className="block px-4 py-2 text-company-950 hover:text-company-50 hover:bg-company-600 hover:rounded"
+                              onClick={() => {
+                                handleScrollToTop(sub.to);
+                                setIsOpen(false);
+                              }}
+                            >
+                              {sub.name}
+                            </Link>
+                          </li>
                         ))}
-                      </div>
+                      </ul>
                     </div>
                   )}
-                </div>
+                </li>
               ))}
-              <Link
-                to="/contact"
-                className="text-company-950 hover:text-company-50 hover:bg-company-600 hover:rounded block px-5 py-2 rounded-md"
-              >
-                Contact Us
-              </Link>
+              {/* 🟢 PENANDA: Tombol Contact Us terbungkus <li> */}
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-company-950 hover:text-company-50 hover:bg-company-600 hover:rounded block px-5 py-2 rounded-md"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

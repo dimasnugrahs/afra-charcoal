@@ -23,21 +23,38 @@ export default function Footer() {
           <h1 className="text-4xl font-bold ml-2">Afra Charcoal</h1>
         </div>
         <ul className="flex justify-center mt-10">
-          <Link to="/" className="mx-4 hover:text-company-400">
-            Home
-          </Link>
-          <Link to="/about" className="mx-4 hover:text-company-400">
-            About
-          </Link>
-          <Link to="/product/charcoal" className="mx-4 hover:text-company-400">
-            Products
-          </Link>
-          <Link to="/contact" className="mx-4 hover:text-company-400">
-            Contact
-          </Link>
+          <li>
+            <Link to="/" className="mx-4 hover:text-company-400">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="mx-4 hover:text-company-400">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/product/charcoal"
+              className="mx-4 hover:text-company-400"
+            >
+              Products
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="mx-4 hover:text-company-400">
+              Contact
+            </Link>
+          </li>
         </ul>
         <div className="flex justify-center mt-4">
-          <a href={instagramUrl} target="_blank" className="mx-4">
+          <a
+            href={instagramUrl}
+            target="_blank"
+            className="mx-4"
+            rel="noopener noreferrer"
+            aria-label="Visit our Instagram page"
+          >
             <svg
               className="w-8 h-8 lg:w-8 lg:h-8 text-company-600 hover:text-company-400"
               aria-hidden="true"
@@ -55,7 +72,13 @@ export default function Footer() {
               />
             </svg>
           </a>
-          <a href={facebookUrl} target="_blank" className="mx-4">
+          <a
+            href={facebookUrl}
+            target="_blank"
+            className="mx-4"
+            rel="noopener noreferrer"
+            aria-label="Visit our Facebook page"
+          >
             <svg
               className="w-8 h-8 lg:w-8 lg:h-8 text-company-600 hover:text-company-400"
               aria-hidden="true"
@@ -72,7 +95,13 @@ export default function Footer() {
               />
             </svg>
           </a>
-          <a href={twitterUrl} target="_blank" className="mx-4">
+          <a
+            href={twitterUrl}
+            target="_blank"
+            className="mx-4"
+            rel="noopener noreferrer"
+            aria-label="Visit our Twitter page"
+          >
             <svg
               className="w-8 h-8 lg:w-8 lg:h-8 text-company-600 hover:text-company-400"
               aria-hidden="true"
